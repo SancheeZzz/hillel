@@ -1,4 +1,5 @@
 import math
+
 def Degrees2Radians (degrees):
     result= math.radians(degrees)
     return(result)
