@@ -11,13 +11,16 @@
 # th_number = number[1:2]
 # sum_of_numbers = int(f_number)+ int(s_number) + int(th_number)
 #3 попытка
+# f_number = n // 100
+# s_number = n % 100 // 10
+# th_number = n % 10
 
-import math
-n = input("Enter random number ")
-n = int(n)
+def sum_of_3_numbers (n):
+    result = n//100 + (n%100//10)+ n%10
+    return result
 
-f_number = n // 100
-s_number = n % 100 // 10
-th_number = n % 10
+n = int(input("Enter random number "))
 
-print ("Sum of 3 number is -", f_number + s_number + th_number)
+result = sum_of_3_numbers(n)
+
+print ("Sum of 3 number is -", result)
