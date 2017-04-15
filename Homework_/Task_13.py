@@ -4,7 +4,7 @@ def square_of_right_triangle (catheter_1,catheter_2):
 
 def perimeter_of_right_triangle(catheter_1,catheter_2):
         import math
-        result= math.sqrt(catheter_1**2+catheter_2**2)
+        result= math.sqrt(catheter_1**2+catheter_2**2)+ catheter_1 + catheter_2
         return result
 
 catheter_1 = int(input("Enter the length of the first catheter:" ))
