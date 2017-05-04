@@ -7,14 +7,16 @@
 #             lst.append(i)
 #             break
 # print (lst)
-
+from math import sqrt
 lst=[]
 for i in range (2,101):
     a = True
-    for n in range (2, i):
+    for n in range (2, int(sqrt(i))+1):
         if i%n==0:
             a=False
             break
+        else:
+            continue
     if a==True:
         lst.append(i)
 print (lst)
