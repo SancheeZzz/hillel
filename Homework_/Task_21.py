@@ -15,8 +15,6 @@ for i in range (2,101):
         if i%n==0:
             a=False
             break
-        else:
-            continue
     if a==True:
         lst.append(i)
 print (lst)
