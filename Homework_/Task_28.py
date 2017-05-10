@@ -4,8 +4,7 @@ lst_2=[]
 
 while len(lst_1)<=5 :
     num= random.randint (0,5)
-    if num%2==0:
-        lst_1.append(num)
+    lst_1.append(num)
 while len(lst_2)<=5 :
     num= random.randint (0,5)
     lst_2.append(num)
