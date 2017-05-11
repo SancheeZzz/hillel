@@ -7,9 +7,12 @@ print(lst)
 zeros = lst.count(0)
 ones = lst.count(1)
 minus_ones = lst.count(-1)
-if zeros == max(zeros,ones,minus_ones):
-    print("Наиболее часто встречается число 0")
-elif ones == max(zeros,ones,minus_ones):
-    print("Наиболее часто встречается число 1")
-elif minus_ones == max(zeros, ones, minus_ones):
-    print("Наиболее часто встречается число -1")
+if zeros==ones or  zeros==minus_ones:
+    print('')
+else:
+    if zeros == max(zeros,ones,minus_ones):
+        print("Наиболее часто встречается число 0")
+    elif ones == max(zeros,ones,minus_ones):
+        print("Наиболее часто встречается число 1")
+    elif minus_ones == max(zeros, ones, minus_ones):
+        print("Наиболее часто встречается число -1")
