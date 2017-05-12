@@ -6,7 +6,7 @@ for i in str:
     idx_1 = str.find(i)
     idxPlus5 = idx_1 + 5
     if idxPlus5 > len(tab_of_encryption):
-        elem_of_tab = tab_of_encryption[idxPlus5-len(tab_of_encryption)]
+        elem_of_tab = tab_of_encryption[idxPlus5%len(tab_of_encryption)]
     else:
         elem_of_tab = tab_of_encryption [idxPlus5]
     str_2+= elem_of_tab
