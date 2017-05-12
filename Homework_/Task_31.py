@@ -10,23 +10,19 @@ password=[]
 
 while len(password)< 8:
 
-    #выбираем символы со списков
-
     rand_symbol_num = random.choice(symbols_for_pass_num)
     rand_symbol_low = random.choice(symbols_for_pass_low)
     rand_symbol_cap = random.choice(symbols_for_pass_cap)
 
-    #добавляем их в password
+    if len (password) >= 6:
+        password.append(rand_symbol_num)
+        password.append(rand_symbol_low)
+    else:
+        password.append(rand_symbol_num)
+        password.append(rand_symbol_low)
+        password.append(rand_symbol_cap)
 
-    password.append(rand_symbol_num)
-    password.append(rand_symbol_low)
-    password.append(rand_symbol_cap)
-
-    #перемешиваем password
 
     random.shuffle(password)
-
-#делаем строку из списка и выводим на экран
-
 password = "".join([str(c) for c in password])
-print(password)
+print("Password - " , password)
