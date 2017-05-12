@@ -7,14 +7,16 @@ symbols_for_pass_cap=["A",'B',"C","D","E","F","G","H","I","J","K","L",'M','N','O
 
 #создаём пустой список для пароля
 password=[]
+max_len= 8
+condition= 6
 
-while len(password)< 8:
+while len(password)< max_len:
 
     rand_symbol_num = random.choice(symbols_for_pass_num)
     rand_symbol_low = random.choice(symbols_for_pass_low)
     rand_symbol_cap = random.choice(symbols_for_pass_cap)
 
-    if len (password) >= 6:
+    if len (password) >= condition:
         password.append(rand_symbol_num)
         password.append(rand_symbol_low)
     else:
