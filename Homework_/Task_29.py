@@ -7,7 +7,7 @@ print(lst)
 zeros = lst.count(0)
 ones = lst.count(1)
 minus_ones = lst.count(-1)
-if zeros==ones or  zeros==minus_ones:
+if zeros==ones or  zeros==minus_ones or minus_ones==ones:
     print('')
 else:
     if zeros == max(zeros,ones,minus_ones):
