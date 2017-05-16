@@ -4,12 +4,12 @@ import random
 simple_numbers=[]
 
 for i in range (2,101):
-    a = True
+    is_simple = True
     for n in range (2, int(sqrt(i))+1):
         if i%n==0:
-            a=False
+            is_simple=False
             break
-    if a==True:
+    if is_simple==True:
         simple_numbers.append(i)
 print(simple_numbers)
 
