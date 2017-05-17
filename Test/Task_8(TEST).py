@@ -1,12 +1,18 @@
-lst = [1,2,3,4,5,6,7,8,9,10,11,12]
+import random
+lst = [random.randint(1,100) for x in range(12)]
+print("Первоначальный список - ", lst)
 maximum= max(lst)
 minimum= min(lst)
-for i in lst:
-    idx=i-1
-    if i == maximum:
+print("Наибольший элемент списка -", maximum)
+print("Наименьший элемент списка -", minimum)
+idx=0
+for elem in lst:
+    if elem==maximum:
         lst[idx]=minimum
-        continue
-    if i == minimum:
+        idx+=1
+    elif elem==minimum:
         lst[idx]=maximum
-        continue
-print(lst)
+        idx+=1
+    else:
+        idx+=1
+print("Список после замены -",lst)
