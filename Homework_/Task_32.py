@@ -25,7 +25,7 @@ def print_phonebook():
         number += 1
 
 def print_phonebook_by_age():
-    for entry in sorted(phone_book, key=lambda age: age['age']):
+    for entry in sorted(phone_book, key=lambda entry: entry['age']):
         print(entry)
 
 
@@ -119,6 +119,7 @@ def main():
             print ("     7 - The number of entries in the phonebook")
             print ("     8 - Avr. age of all persons")
             print ("     9 - Increase age by num. of years")
+            print ("     sur - Print phonebook by surname")
             print ("-----------------------------")
             print ("     s - Save to file")
             print ("     l - Load from file")
@@ -163,6 +164,9 @@ def main():
                 save_to_file()
             elif str(user_input) == 'l':
                 load_from_file()
+            elif str(user_input) == 'sur':
+                for entry in sorted(phone_book, key=lambda entry: entry['surname']):
+                    print(entry)
             else:
                 printError("Something went wrong. Try again...")
 
